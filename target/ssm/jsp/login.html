@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--1.导入css 和 js文件-->
+		<!--layui:html/css/js的框架，简化三种的操作-->
+		<link rel="stylesheet" href="../layui/css/layui.css" />
+
+	</head>
+
+	<body>
+
+		<ul class="layui-nav">
+			<li class="layui-nav-item">
+				<a href="">控制台<span class="layui-badge">9</span></a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="javascript:;">修改信息</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">安全管理</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">退了</a>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+
+		<div class="layui-fluid">
+			<div class="layui-row" style="margin-top: 80px;">
+				
+				<h2 align="center">用户登录</h2>
+				<div class="layui-col-md-offset4 layui-col-md4">
+					
+					<form class="layui-form layui-form-pane" action="" >
+						<div class="layui-form-item">
+							<label class="layui-form-label">用户名</label>
+							<div class="layui-input-inline">
+								<input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+							</div>
+							<div class="layui-form-mid layui-word-aux">成功</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">密码</label>
+							<div class="layui-input-inline">
+								<input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+							</div>
+							<div class="layui-form-mid layui-word-aux">成功</div>
+						</div>
+						
+						<div class="layui-form-item">
+							<label class="layui-form-label">记住用户名</label>
+							<div class="layui-input-block">
+								<input type="checkbox" name="switch" lay-skin="switch">
+							</div>
+						</div>
+						
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="../layui/layui.all.js"></script>
+		<script>
+			//一般直接写在一个js文件中
+			layui.use(['layer', 'form', 'element'], function() {
+				var layer = layui.layer, //初始化
+					form = layui.form,
+					element = layui.element;
+				//layer.msg('Hello World');
+				/*layer.msg('hello', {
+					time: 1000
+				});
+				layer.msg('有表情地提示', {
+					icon: 6
+				});
+
+				layer.msg('关闭后想做些什么', function() {
+					//do something
+					console.log("1234");
+				});*/
+			});
+		</script>
+	</body>
+
+</html>

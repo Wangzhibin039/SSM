@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--1.导入css 和 js文件-->
+		<!--layui:html/css/js的框架，简化三种的操作-->
+		<link rel="stylesheet" href="../layui/css/layui.css" />
+
+	</head>
+
+	<body>
+
+		<ul class="layui-nav">
+			<li class="layui-nav-item">
+				<a href="">控制台<span class="layui-badge">9</span></a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="javascript:;">修改信息</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">安全管理</a>
+					</dd>
+					<dd>
+						<a href="#">退了</a>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+
+		<div class="layui-fluid">
+
+			<h2 align="center" style="margin-top: 20px;">员工列表</h2>
+			<div class="layui-row" style="margin-top: 20px;">
+				<div class="layui-col-md-offset2 layui-col-md8">
+					<div class="layui-btn-group">
+						<a href="addEmp.html" class="layui-btn"> <i class="layui-icon">&#xe654;</i>增加</a>
+						<button class="layui-btn"> <i class="layui-icon">&#xe642;</i>编辑</button>
+						<button class="layui-btn"> <i class="layui-icon">&#xe640;</i>删除</button>
+					</div>
+				</div>
+			</div>
+			<div class="layui-row">
+				<div class="layui-col-md-offset2 layui-col-md8">
+					<table class="layui-table">
+						<!--<colgroup>
+						<col width="150">
+						<col width="200">
+						<col>
+					</colgroup>-->
+						<thead>
+							<th>序号</th>
+							<th>id</th>
+							<th>姓名</th>
+							<th>岗位</th>
+							<th>上级</th>
+							<th>工资</th>
+							<th>入职日期</th>
+							<th>部门编号</th>
+							<th colspan="2">操作</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>1001</td>
+								<td>张三</td>
+								<td>java开发攻城狮</td>
+								<td>0</td>
+								<td>20000</td>
+								<td>2019-5-6</td>
+								<td>0</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs">修改</a>
+								</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs layui-btn-danger">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>1001</td>
+								<td>张三</td>
+								<td>java开发攻城狮</td>
+								<td>0</td>
+								<td>20000</td>
+								<td>2019-5-6</td>
+								<td>0</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs">修改</a>
+								</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs layui-btn-danger">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>1001</td>
+								<td>张三</td>
+								<td>java开发攻城狮</td>
+								<td>0</td>
+								<td>20000</td>
+								<td>2019-5-6</td>
+								<td>0</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs">修改</a>
+								</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs layui-btn-danger">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>1001</td>
+								<td>张三</td>
+								<td>java开发攻城狮</td>
+								<td>0</td>
+								<td>20000</td>
+								<td>2019-5-6</td>
+								<td>0</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs">修改</a>
+								</td>
+								<td>
+									<a href="#" class="layui-btn layui-btn-xs layui-btn-danger">删除</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="layui-row" style="margin-top: 20px;">
+				<div class="layui-col-md-offset2 layui-col-md8">
+					<div class="layui-btn-group">
+						<button class="layui-btn layui-btn-radius layui-btn-primary">上一页</button>
+						<button class="layui-btn layui-btn-radius ">1</button>
+						<button class="layui-btn layui-btn-radius layui-btn-primary">2</button>
+						<button class="layui-btn layui-btn-radius layui-btn-primary">3</button>
+						<button class="layui-btn layui-btn-radius layui-btn-primary">4</button>
+						<button class="layui-btn layui-btn-radius layui-btn-primary">5</button>
+						<button class="layui-btn layui-btn-radius layui-btn-primary">下一页</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../layui/layui.all.js"></script>
+		<script>
+			//一般直接写在一个js文件中
+			layui.use(['layer', 'form', 'element'], function() {
+				var layer = layui.layer, //初始化
+					form = layui.form,
+					element = layui.element;
+				//layer.msg('Hello World');
+				/*layer.msg('hello', {
+					time: 1000
+				});
+				layer.msg('有表情地提示', {
+					icon: 6
+				});
+
+				layer.msg('关闭后想做些什么', function() {
+					//do something
+					console.log("1234");
+				});*/
+			});
+		</script>
+	</body>
+
+</html>
